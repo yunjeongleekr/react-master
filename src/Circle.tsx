@@ -21,12 +21,9 @@ interface CircleProps {
 }
 
 function Circle({ bgColor, borderColor, text = "default text" }: CircleProps) {
-  // borderColor가 undifinded면? "..." 값을 넣어줌
-  return (
-    <Container bgColor={bgColor} borderColor={borderColor ?? "blue"}>
-      {text}
-    </Container>
-  );
+  const [value, setValue] = useState();
+
+  return <Container bgColor={bgColor} borderColor={borderColor ?? "blue"} />;
 }
 
 export default Circle;
